@@ -1,7 +1,7 @@
-import {Board} from './Board';
-import {Cell} from './Cell';
-import {FiguresNames} from './figures/Figure';
-import {Colors} from './Colors';
+import {Board} from './Board'
+import {Cell} from './Cell'
+import {FiguresNames} from './figures/Figure'
+import {Colors} from './Colors'
 
 export abstract class GameManager {
 

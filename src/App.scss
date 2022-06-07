@@ -26,9 +26,12 @@
   align-items: center;
 }
 
-.cell img {
-  width: 50%;
-  position: relative;
+.cell {
+  img {
+    width: 50%;
+    position: relative;
+    //transform: rotate(random(360) + deg);
+  }
 }
 
 .black {
@@ -57,5 +60,3 @@
   margin: 20px;
   background-color: lightgray;
 }
-
-/*# sourceMappingURL=App.css.map */

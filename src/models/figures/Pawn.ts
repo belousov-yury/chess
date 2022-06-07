@@ -1,8 +1,8 @@
-import {Figure, FiguresNames} from './Figure';
-import {Colors} from '../Colors';
-import {Cell} from '../Cell';
-import blackLogo from '../../assets/black-pawn.png';
-import whiteLogo from '../../assets/white-pawn.png';
+import {Figure, FiguresNames} from './Figure'
+import {Colors} from '../Colors'
+import {Cell} from '../Cell'
+import blackLogo from '../../assets/figures/black-pawn.png'
+import whiteLogo from '../../assets/figures/white-pawn.png'
 
 export class Pawn extends Figure {
 
@@ -30,12 +30,10 @@ export class Pawn extends Figure {
       return true
     }
 
-    if (target.y === this.cell.y + direction
+    return target.y === this.cell.y + direction
       && (target.x === this.cell.x + 1 || target.x === this.cell.x - 1)
-      && this.cell.isEnemy(target)) {
-      return true
-    }
-    return false
+      && this.cell.isEnemy(target)
+
   }
 
   movedFigure() {

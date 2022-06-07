@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react'
-import './App.css'
+import './App.scss'
 import BoardComponent from './components/BoardComponent'
 import {Board} from './models/Board'
 import {Player} from './models/Player'
@@ -28,8 +28,8 @@ function App() {
 
   }
 
-  useEffect(()=> {
-    if(whitePlayer.mate || blackPlayer.mate) {
+  useEffect(() => {
+    if (whitePlayer.mate || blackPlayer.mate) {
       setGameOver(true)
     }
   }, [whitePlayer.mate, blackPlayer.mate])
@@ -38,6 +38,7 @@ function App() {
     if (currentPlayer) {
       checkMate()
     }
+  // eslint-disable-next-line
   }, [currentPlayer])
 
   function checkMate(): void {
@@ -81,7 +82,6 @@ function App() {
       })
     }
   }
-
 
 
   function restart() {

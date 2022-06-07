@@ -1,7 +1,7 @@
-import {Colors} from './Colors';
-import {Board} from './Board';
-import {Figure, FiguresNames} from './figures/Figure';
-import {GameManager} from './GameManager';
+import {Colors} from './Colors'
+import {Board} from './Board'
+import {Figure, FiguresNames} from './figures/Figure'
+import {GameManager} from './GameManager'
 
 export class Cell {
   readonly x: number
@@ -118,7 +118,6 @@ export class Cell {
     if (this.figure) {
       this.figure.cell = this
     }
-
   }
 
   addLostFigure(figure: Figure) {
@@ -126,7 +125,6 @@ export class Cell {
       ? this.board.lostBlackFigures.push(figure)
       : this.board.lostWhiteFigures.push(figure)
   }
-
 
   moveFigure(target: Cell): boolean {
     if (this.possibleMoves.length) {
